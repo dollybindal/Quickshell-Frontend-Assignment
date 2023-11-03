@@ -1,0 +1,113 @@
+npx create-react-app kanban-board-app
+cd kanban-board-app
+npm install axios
+ 
+const data = [
+  {
+    id: 1,
+    title: 'Ticket 1',
+    status: 'To Do',
+    user: 'User A',
+    priority: 3,
+  },
+  {
+    id: 2,
+    title: 'Ticket 2',
+    status: 'In Progress',
+    user: 'User B',
+    priority: 2,
+  },
+  {
+    id: 3,
+    title: 'Ticket 3',
+    status: 'Done',
+    user: 'User C',
+    priority: 1,
+  },
+  // Add more tickets...
+];
+
+export default data;
+
+import React, { useState } from 'react';
+import './App.css';
+import data from './data'; // Replace with API call
+
+function App() {
+  const [tickets, setTickets] = useState(data);
+  const [displayOption, setDisplayOption] = useState('status');
+  const [sortOption, setSortOption] = useState('priority');
+
+  // Implement API call to fetch data here
+
+  return (
+    <div className="App">
+      <h1>Kanban Board</h1>
+      {/* Display options component */}
+      {/* Kanban board component */}
+    </div>
+  );
+}
+
+export default App;
+
+import React from 'react';
+import Card from './Card';
+
+function KanbanBoard({ tickets }) {
+  // Implement logic to render tickets based on displayOption
+  // Example: group by status, user, or priority
+
+  return (
+    <div className="kanban-board">
+      {/* Render columns or sections based on displayOption */}
+      {/* Render Card components in each section */}
+    </div>
+  );
+}
+
+export default KanbanBoard;
+import React from 'react';
+
+function Card({ ticket }) {
+  return (
+    <div className="card">
+      {/* Display ticket details */}
+    </div>
+  );
+}
+
+export default Card;
+import React from 'react';
+
+function Card({ ticket }) {
+  return (
+    <div className="card">
+      {/* Display ticket details */}
+    </div>
+  );
+}
+
+export default Card;
+import React from 'react';
+
+function Card({ ticket }) {
+  return (
+    <div className="card">
+      {/* Display ticket details */}
+    </div>
+  );
+}
+
+export default Card;
+import React from 'react';
+
+function DisplayOptions({ setDisplayOption, setSortOption }) {
+  return (
+    <div className="display-options">
+      {/* Display and sorting buttons */}
+    </div>
+  );
+}
+
+export default DisplayOptions;
